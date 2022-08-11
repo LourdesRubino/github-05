@@ -1,0 +1,266 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
+ body{ 
+    background-color: antiquewhite;
+ }
+
+ header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+ header nav ul{ 
+   display: flex;
+   column-gap: 15px;
+   margin-bottom: 25px;
+   margin-top: 15px;
+
+ }
+ header nav ul li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #C36C3A;
+    border-radius: 5px;
+    
+  }
+ /* header nav ul li:hover{
+    background-color:rgb(255, 255, 255);
+    transform: scale(0.9);
+    color: rgb(68, 35, 14);
+    /* box-shadow: 2px 2px 10px #cc8155;
+ }*/
+
+.logo{ 
+   margin-top: 30px;
+}
+main{
+  height: 80vh;
+  display: grid;
+  grid-template-columns:auto auto  ;
+  grid-template-rows:1fr 1fr ;
+  grid-template-areas: "entrada1 entrada2"
+                       "entrada3 entrada4"
+                       "main-p   main-p";
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+ 
+ }
+
+.entrada1{ 
+    grid-area: entrada1;
+    margin: 15px;
+}
+.entrada2{ 
+    grid-area: entrada2;
+    margin: 15px;
+}
+.entrda3{
+    grid-area: entrada3; 
+     margin: 15px;
+ }
+ .entrada4{
+    grid-area: entrada4;
+    margin: 15px;
+  }
+.main-p{
+    grid-area: main-p;
+ }
+ .autor{
+    display: none;
+  }
+.ahora12{
+    display: none;
+ }
+ .main-p2{
+    display: none;
+    color: rgb(153, 73, 8);
+    font-size: 15px;
+   margin-top: 25px;
+    
+  }
+ .main-p{
+    color: rgb(153, 73, 8);
+    font-size: 15px;
+   margin-top: 25px;
+  }
+  .whatsaap{
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+   }
+   .mainp3{
+      display: none;
+      }
+      .buzohombre{ 
+         display: none;
+      }
+      .buzonena{ 
+         display: none;
+      }
+      .buzonene{
+         display: none;
+       }
+      .mujer{ 
+         display: none;
+      }
+      .juego{ 
+         display: none;
+      }
+   
+
+   @media screen and (min-width:600px) {
+
+    main{
+        grid-template-columns: auto auto auto auto ;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-areas: "ahora12  ahora12  ahora12  ahora12"
+                             "entrada1 entrada2 entrada3 entrada4"
+                             "main-p2   main-p2   main-p2   main-p2"
+                             "autor    autor    autor    autor ";
+     }
+    .ahora12{
+        display: block;
+        grid-area: ahora12;
+     }
+     .main-p2{ 
+        display: block;
+        grid-area: main-p2;
+        font-size: 18px;
+        font-weight: bold;
+     }
+    .autor{
+        display: block;
+        grid-area: autor;
+        text-align: center;
+      }
+    .main-p{
+        display: none;
+     }
+     .whatsaap{ 
+        justify-content: left;
+        margin-left: 285px;
+        margin-top: 100px;
+     }
+     .mainp3{
+      display: none;
+      }
+      .buzohombre{ 
+         display: none;
+      }
+      .buzonena{ 
+         display: none;
+      }
+      .buzonene{
+         display: none;
+       }
+      .mujer{ 
+         display: none;
+      }
+      .juego{ 
+         display: none;
+      }
+
+     
+   } 
+
+   @media screen and ( min-width:1024px) {
+   
+     header{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo{ 
+        margin-top: 5px;
+      }
+     
+      main{
+         grid-template-columns: auto auto auto auto ;
+        
+         grid-template-areas: "main-p   main-p  main-p ahora12 ahora12"
+                              "entrada1 entrada1 entrada4 ahora12 ahora12"
+                              "mainp3   mainp3   mainp3  mainp3  mainp3" 
+                              "buzohombre buzonena buzonene mujer juego"
+                              "autor    autor    autor    autor   autor ";
+                              margin: 50px;
+         
+      }
+      .main-p2{ 
+         display: none;
+      }
+      .main-p{
+         display: block;
+         grid-area: main-p;
+         margin-top: 2px;
+         margin-bottom: 45px;
+         margin-right: 60px;
+      }
+      .ahora12{ 
+        grid-area: ahora12; 
+    
+       
+      }
+      .whatsaap{ 
+         margin-left: 30px;
+      }
+      .entrada2{ 
+         display: none;
+      }
+      .entrada3{ 
+         display: none;
+      }
+      .entrada1{ 
+         margin-bottom: 10px;
+         margin-right: 60px;
+       
+      }
+      .entrada4{ 
+         margin-bottom: 10px;
+         margin-right: 60px;
+      }
+      .buzohombre{ 
+         display: block;
+         grid-area: buzohombre ;
+         margin-left: 100px ;
+         
+      }
+      .buzonena{ 
+         display: block;
+         grid-area: buzonena;
+         margin-left: 150px;
+      }
+      .buzonene{
+         display: block;
+         grid-area: buzonene;
+         margin-left: 150px ;
+       }
+      .mujer{ 
+         display: block;
+         grid-area: mujer;
+         margin-left: 150px ;
+      }
+      .juego{ 
+         display: block;
+         grid-area: juego;
+         margin-left: 100px ;
+         text-align: right;
+      }
+      .mainp3{ 
+      display: block;
+      grid-area: mainp3;
+      color:rgb(153, 73, 8) ;
+      margin: 70px;
+    }
+      
+   
+   }
+   
+  
+   
